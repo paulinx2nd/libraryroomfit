@@ -1,0 +1,210 @@
+{
+  "ctor": {
+    "params": [],
+    "kwparams": {}
+  },
+  "methods": {
+    "cancel_booking": {
+      "params": [
+        [
+          "request_id",
+          "string"
+        ],
+        [
+          "reason",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "confirm_booking": {
+      "params": [
+        [
+          "request_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "get_request": {
+      "params": [
+        [
+          "request_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": {
+        "$dict": "any"
+      }
+    },
+    "get_request_count": {
+      "params": [],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "int"
+    },
+    "get_room": {
+      "params": [
+        [
+          "room_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": {
+        "$dict": "any"
+      }
+    },
+    "match_request": {
+      "params": [
+        [
+          "request_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "matches_booking": {
+      "params": [
+        [
+          "request_id",
+          "string"
+        ],
+        [
+          "room_id",
+          "string"
+        ],
+        [
+          "start_slot",
+          "int"
+        ],
+        [
+          "end_slot",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "bool"
+    },
+    "open_request": {
+      "params": [
+        [
+          "request_key",
+          "string"
+        ],
+        [
+          "start_slot",
+          "int"
+        ],
+        [
+          "end_slot",
+          "int"
+        ],
+        [
+          "attendees",
+          "int"
+        ],
+        [
+          "requirements",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "register_room": {
+      "params": [
+        [
+          "room_key",
+          "string"
+        ],
+        [
+          "capacity",
+          "int"
+        ],
+        [
+          "features",
+          "string"
+        ],
+        [
+          "use_policy",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "room_decision": {
+      "params": [
+        [
+          "request_id",
+          "string"
+        ],
+        [
+          "approve",
+          "bool"
+        ],
+        [
+          "note",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "room_is_free": {
+      "params": [
+        [
+          "room_id",
+          "string"
+        ],
+        [
+          "start_slot",
+          "int"
+        ],
+        [
+          "end_slot",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "bool"
+    },
+    "set_room_active": {
+      "params": [
+        [
+          "room_id",
+          "string"
+        ],
+        [
+          "active",
+          "bool"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    }
+  }
+}
